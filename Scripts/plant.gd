@@ -5,17 +5,18 @@ var _plantStage: int = 0
 var _plantMaxStage: int = 4;
 
 #Getting reference to sprite
-@onready var sprite_2d: Sprite2D = $Wind/Sprite2D
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	sprite_2d.texture = getTexture()
-	
 
 # Basically tick
 func _process(delta: float) -> void:
 	pass
 	print("hi")
+	if Input.is_action_just_pressed("ui_right"):
+		grow()
 	
 #Gets the texture from the cropManager using the texture ID and the plant's current stage
 func getTexture() -> Resource:
@@ -25,6 +26,7 @@ func getTexture() -> Resource:
 func grow() -> void:
 	if (_plantStage < _plantMaxStage):
 		_plantStage += 1
+		sprite_2d.texture = cropManager.getTexture(_plantTextureId, _plantStage)
 		
 	else:
 		push_error("Plant stage was somehow over the limit when calling grow()")

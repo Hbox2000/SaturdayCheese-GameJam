@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ctpvwjw5hufp7"]
+
+[ext_resource type="Texture2D" uid="uid://ditggacbww4px" path="res://Assets/DebugAssets/debugPot.png" id="1_cc2i1"]
+[ext_resource type="Script" uid="uid://bwv267opqjgwo" path="res://Scripts/pot.gd" id="1_rj0eo"]
+[ext_resource type="PackedScene" uid="uid://dqfbkw0idq5u5" path="res://Scenes/plant.tscn" id="3_tpvhl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oki1f"]
+size = Vector2(78, 66)
+
+[node name="Pot" type="Node2D" unique_id=1865387772]
+script = ExtResource("1_rj0eo")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1789276842]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1956047614]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_oki1f")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=525173861]
+texture = ExtResource("1_cc2i1")
+
+[node name="Plant" parent="." unique_id=159524348 instance=ExtResource("3_tpvhl")]
+visible = false
+position = Vector2(-8, -74)
