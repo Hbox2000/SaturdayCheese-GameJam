@@ -10,7 +10,7 @@ func _ready() -> void:
 	
 	sprite_2d.scale = sprite_2d.scale / 6
 	#_seedTextureId = randi_range(0, _seedManager.GetMaxSeeds)
-	#sprite_2d.Texture = getTexture() # this will error until the seed manager is implemented
+	sprite_2d.texture = getTexture() # this will error until the seed manager is implemented
 	pass # Replace with function body.
 
 
@@ -20,6 +20,4 @@ func _process(delta: float) -> void:
 	pass
 
 func getTexture() -> Resource:
-	# TODO : add implementation
-	return null
-	pass
+	return cropManager.getTexture(_seedTextureId, 2)

@@ -1,15 +1,16 @@
 extends Node2D
 
-var _plantTextureId : int
+var _plantTextureId : int = 0
 var _plantStage: int = 0
 var _plantMaxStage: int = 4;
 
 #Getting reference to sprite
-@onready var sprite2D = $Sprite2D
+@onready var sprite_2d: Sprite2D = $Wind/Sprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	sprite2D = getTexture() 
+	sprite_2d.texture = getTexture()
+	
 
 # Basically tick
 func _process(delta: float) -> void:
@@ -18,9 +19,8 @@ func _process(delta: float) -> void:
 	
 #Gets the texture from the cropManager using the texture ID and the plant's current stage
 func getTexture() -> Resource:
-	return
-	#return cropManager.getTexture(_plantTextureId, _plantStage)
-	 
+	return cropManager.getTexture(_plantTextureId, _plantStage)
+	
 #Increases the plantStage by one
 func grow() -> void:
 	if (_plantStage < _plantMaxStage):
