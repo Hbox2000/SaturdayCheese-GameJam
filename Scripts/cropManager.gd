@@ -25,7 +25,6 @@ func _ready() -> void:
 	var plantFolders: Array[String] = _getPlantFolders()
 	
 	for folder in plantFolders:
-		push_warning(folder)
 		_registerPlant(folder)
 
 
@@ -53,7 +52,6 @@ func _registerPlant(path: String) -> void:
 	
 	for i in range(5):
 		textures._inputTexture(load(path.path_join(str(i) + "_" + plantName + ".png")), i)
-		push_warning(path.path_join(str(i) + "_" + plantName + ".png"))
 	
 	registeredPlants.append(textures)
 

@@ -17,7 +17,7 @@ func _ready() -> void:
 	sprite_2d.texture = getTexture() # this will error until the seed manager is implemented
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	numFrames = numFrames + 1
 	
 	if windActive:

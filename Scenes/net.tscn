@@ -2,14 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://dupkpwef6c11r" path="res://Scenes/tool.tscn" id="1_0ln44"]
 [ext_resource type="Script" uid="uid://ck0awpjmdx65i" path="res://Scripts/net.gd" id="2_ky24w"]
-[ext_resource type="Texture2D" uid="uid://bdp31cp818vl6" path="res://Assets/DebugAssets/debugNet.png" id="3_0rmr2"]
+[ext_resource type="Texture2D" uid="uid://bhwjoppbrjip5" path="res://Assets/FinalAssets/LacrosseStick.png" id="3_0rmr2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ime0x"]
+size = Vector2(42, 40)
 
 [node name="Net" unique_id=371491515 instance=ExtResource("1_0ln44")]
 z_index = 6
 script = ExtResource("2_ky24w")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0" unique_id=1215327979]
+position = Vector2(35, -41)
+shape = SubResource("RectangleShape2D_ime0x")
+
 [node name="Sprite2D" type="Sprite2D" parent="." index="1" unique_id=1462248705]
 texture = ExtResource("3_0rmr2")
 
 [node name="SeedPlacement" type="Node2D" parent="." index="2" unique_id=745169568]
-position = Vector2(21, -19)
+position = Vector2(33, -39)
