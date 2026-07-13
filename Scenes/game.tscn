@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dmag40c803yf3"]
 
 [ext_resource type="PackedScene" uid="uid://7pllmm3y1gt3" path="res://Scenes/seed.tscn" id="1_ebmjs"]
-[ext_resource type="PackedScene" uid="uid://dldmygp3maqe7" path="res://Scenes/test.tscn" id="2_qxrlw"]
 
 [node name="Game" type="Node2D" unique_id=173103109]
 
@@ -9,6 +8,3 @@
 
 [node name="Seed" parent="." unique_id=625082182 instance=ExtResource("1_ebmjs")]
 position = Vector2(-580, -317)
-
-[node name="Node2D" parent="." unique_id=738011392 instance=ExtResource("2_qxrlw")]
-position = Vector2(-6, -50)
