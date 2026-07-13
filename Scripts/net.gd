@@ -15,4 +15,6 @@ func _process(delta: float) -> void:
 
 func Use() -> void:
 	
-	pass
+	if seedInv == null :
+		print("it's null")
+		pass
