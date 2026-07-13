@@ -9,3 +9,7 @@ script = ExtResource("1_fgu4o")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1709508351]
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_6gypx")
+
+[node name="GrowTimer" type="Timer" parent="." unique_id=577475896]
+wait_time = 10.0
+one_shot = true

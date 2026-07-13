@@ -24,6 +24,10 @@ texture = ExtResource("1_ebmjs")
 position = Vector2(0, -63)
 script = ExtResource("2_qxrlw")
 
+[node name="SeedTimer" type="Timer" parent="Window" unique_id=1126348270]
+wait_time = 0.5
+one_shot = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Window" unique_id=1261866246]
 position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_ime0x")
@@ -77,4 +81,4 @@ position = Vector2(186, 42)
 
 [node name="Net" parent="." unique_id=371491515 instance=ExtResource("4_3dryh")]
 z_index = 5
-position = Vector2(222, -90)
+position = Vector2(224, -90)
