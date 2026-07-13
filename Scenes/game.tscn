@@ -1,5 +1,12 @@
 [gd_scene format=3 uid="uid://dmag40c803yf3"]
 
+[ext_resource type="Texture2D" uid="uid://bb1qapu77kplb" path="res://Assets/Plants/0_DebugPlant/0_DebugPlant.png" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://ctahn4tm2ykft" path="res://Scripts/test.gd" id="2_qxrlw"]
+
 [node name="Game" type="Node2D" unique_id=173103109]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1181185567]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=794428234]
+texture = ExtResource("1_ebmjs")
+script = ExtResource("2_qxrlw")
