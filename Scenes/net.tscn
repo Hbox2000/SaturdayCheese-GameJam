@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cir5v0ri6kidm"]
+
+[ext_resource type="PackedScene" uid="uid://dupkpwef6c11r" path="res://Scenes/tool.tscn" id="1_0ln44"]
+
+[node name="Net" unique_id=371491515 instance=ExtResource("1_0ln44")]
