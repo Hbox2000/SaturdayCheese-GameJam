@@ -18,4 +18,3 @@ scale = Vector2(1.735, 3.605)
 shape = SubResource("RectangleShape2D_2ui3f")
 
 [connection signal="area_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="body_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_body_entered"]

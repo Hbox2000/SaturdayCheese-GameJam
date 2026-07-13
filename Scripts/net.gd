@@ -1,5 +1,7 @@
 extends Area2D
 var seedScene = load("res://Scenes/seed.tscn")
+
+var seedInv: Node2D = null
 # var inventory : seedScene 
 
 # Called when the node enters the scene tree for the first time.

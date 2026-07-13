@@ -23,6 +23,10 @@ cropManager="*uid://bw1uekqh37cde"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+seed=""
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

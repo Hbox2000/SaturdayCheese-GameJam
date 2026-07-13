@@ -12,7 +12,7 @@ var _seedTextureId : int = 0;
 func _ready() -> void:
 	mainPos = position
 	sprite_2d.scale = sprite_2d.scale / 6
-	_seedTextureId = randi_range(0, cropManager.maxSeedCount())
+	_seedTextureId = randi_range(0, cropManager.maxSeedCount() - 1)
 	sprite_2d.texture = getTexture() # this will error until the seed manager is implemented
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
