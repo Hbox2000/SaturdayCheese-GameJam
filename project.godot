@@ -13,7 +13,6 @@ config_version=5
 config/name="SaturdayCheese-GameJam"
 run/main_scene="uid://dqfbkw0idq5u5"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://Assets/Plants/0_DebugPlant/icon.svg"
 
 [autoload]
 
