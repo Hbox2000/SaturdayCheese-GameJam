@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SaturdayCheese-GameJam"
-run/main_scene="uid://dqfbkw0idq5u5"
+run/main_scene="uid://7pllmm3y1gt3"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
 [autoload]

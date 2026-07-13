@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://4mdlpyiaksdo"]
+
+[ext_resource type="Script" uid="uid://bmtdy6cmdpgi0" path="res://Scripts/wind.gd" id="1_gc4i6"]
+
+[node name="Wind" type="Node2D" unique_id=674933782]
+script = ExtResource("1_gc4i6")
