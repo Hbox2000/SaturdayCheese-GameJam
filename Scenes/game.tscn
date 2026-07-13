@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://7pllmm3y1gt3" path="res://Scenes/seed.tscn" id="1_ebmjs"]
 [ext_resource type="PackedScene" uid="uid://ctpvwjw5hufp7" path="res://Scenes/pot.tscn" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://cir5v0ri6kidm" path="res://Scenes/net.tscn" id="3_wrm1d"]
 
 [node name="Game" type="Node2D" unique_id=173103109]
 
@@ -12,3 +13,5 @@ position = Vector2(-580, -317)
 
 [node name="Pot" parent="." unique_id=1865387772 instance=ExtResource("2_qxrlw")]
 position = Vector2(247, -91)
+
+[node name="Net" parent="." unique_id=371491515 instance=ExtResource("3_wrm1d")]
