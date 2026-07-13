@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b56fxtt5b8p48"
-path="res://.godot/imported/icon.svg-bcff67ef0d31f3d7d4ecafed5b24966f.ctex"
+uid="uid://dcglx0g6rijt2"
+path="res://.godot/imported/2_DebugPlant.png-d431af1cd8b472620a91342ba1f01856.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Plants/0_DebugPlant/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-bcff67ef0d31f3d7d4ecafed5b24966f.ctex"]
+source_file="res://Assets/Plants/0_DebugPlant/2_DebugPlant.png"
+dest_files=["res://.godot/imported/2_DebugPlant.png-d431af1cd8b472620a91342ba1f01856.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
