@@ -11,9 +11,12 @@ config_version=5
 [application]
 
 config/name="SaturdayCheese-GameJam"
-run/main_scene="uid://booi3lkcia2sk"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/Plants/0_DebugPlant/icon.svg"
+
+[autoload]
+
+cropManager="*uid://bw1uekqh37cde"
 
 [display]
 
