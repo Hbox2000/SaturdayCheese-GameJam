@@ -1,27 +1,50 @@
-extends Node2D
+extends Area2D
+class_name Tool
 
-var mouse = get_global_mouse_position();
-var isOnMouse : bool = false
-# Called when the node enters the scene tree for the first time.
+@export var return_duration: float = 0.3
+
+var _original_position: Vector2
+var _is_following: bool = false
+var _tween: Tween
+
 func _ready() -> void:
-	pass # Replace with function body.
+	_original_position = global_position
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	mouse = get_global_mouse_position()
-	if mouse.distance_to(position) < 40 :
-		isOnMouse = true
-	
-	if isOnMouse : 
+func _process(_delta: float) -> void:
+	if _is_following:
 		global_position = get_global_mouse_position()
-func _use() -> void:
+	
+	if not _is_following and Input.is_action_just_pressed("left_click"):
+		_pick_up()
+	
+	if _is_following and Input.is_action_just_pressed("right_click"):
+		_release()
+		get_viewport().set_input_as_handled()
+
+func is_following() -> bool:
+	return _is_following
+
+func _pick_up() -> void:
+	_is_following = true
+	if _tween:
+		_tween.kill()
+	_on_picked_up()
+
+func _release() -> void:
+	_is_following = false
+	_on_released()
+	_return_to_origin()
+
+func _return_to_origin() -> void:
+	_tween = create_tween()
+	_tween.tween_property(self, "global_position", _original_position, return_duration)
+	_tween.tween_callback(_on_returned)
+
+func _on_picked_up() -> void:
 	pass
 
-func Use() -> void:
+func _on_released() -> void:
 	pass
 
-
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	if area.is_in_group("seed"):
-		Use()
+func _on_returned() -> void:
+	pass

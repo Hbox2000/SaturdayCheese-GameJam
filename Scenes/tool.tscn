@@ -2,5 +2,13 @@
 
 [ext_resource type="Script" uid="uid://eivsqikg67cv" path="res://Scripts/tool.gd" id="1_v307u"]
 
-[node name="Tool" type="Node2D" unique_id=371491515]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ime0x"]
+size = Vector2(63, 37)
+
+[node name="Area2D" type="Area2D" unique_id=321682570]
+z_index = 5
 script = ExtResource("1_v307u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1202402340]
+position = Vector2(25, -10)
+shape = SubResource("RectangleShape2D_ime0x")

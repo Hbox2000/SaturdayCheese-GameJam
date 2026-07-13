@@ -53,6 +53,7 @@ func _registerPlant(path: String) -> void:
 	
 	for i in range(5):
 		textures._inputTexture(load(path.path_join(str(i) + "_" + plantName + ".png")), i)
+		push_warning(path.path_join(str(i) + "_" + plantName + ".png"))
 	
 	registeredPlants.append(textures)
 
