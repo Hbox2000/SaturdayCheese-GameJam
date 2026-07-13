@@ -4,3 +4,5 @@
 
 [node name="Plant" type="Node2D" unique_id=159524348]
 script = ExtResource("1_fgu4o")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1709508351]
