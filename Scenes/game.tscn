@@ -1,17 +1,14 @@
 [gd_scene format=3 uid="uid://dmag40c803yf3"]
 
-[ext_resource type="PackedScene" uid="uid://7pllmm3y1gt3" path="res://Scenes/seed.tscn" id="1_ebmjs"]
 [ext_resource type="PackedScene" uid="uid://ctpvwjw5hufp7" path="res://Scenes/pot.tscn" id="2_qxrlw"]
-[ext_resource type="PackedScene" uid="uid://cir5v0ri6kidm" path="res://Scenes/net.tscn" id="3_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://blj3123hay32q" path="res://Scenes/window.tscn" id="3_wrm1d"]
 
 [node name="Game" type="Node2D" unique_id=173103109]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1181185567]
 
-[node name="Seed" parent="." unique_id=625082182 instance=ExtResource("1_ebmjs")]
-position = Vector2(-580, -317)
-
 [node name="Pot" parent="." unique_id=1865387772 instance=ExtResource("2_qxrlw")]
-position = Vector2(247, -91)
+position = Vector2(497, 269)
 
-[node name="Net" parent="." unique_id=371491515 instance=ExtResource("3_wrm1d")]
+[node name="Window" parent="." unique_id=654464002 instance=ExtResource("3_wrm1d")]
+position = Vector2(0, 1)
