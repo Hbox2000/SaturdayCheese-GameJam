@@ -1,11 +1,8 @@
 [gd_scene format=3 uid="uid://7pllmm3y1gt3"]
 
 [ext_resource type="Script" uid="uid://i8kssggfhn16" path="res://Scripts/seed.gd" id="1_h627t"]
-[ext_resource type="PackedScene" uid="uid://4mdlpyiaksdo" path="res://Scenes/wind.tscn" id="2_nwbkr"]
 
 [node name="Seed" type="Node2D" unique_id=625082182]
 script = ExtResource("1_h627t")
 
-[node name="Wind" parent="." unique_id=674933782 instance=ExtResource("2_nwbkr")]
-
-[node name="Sprite2D" type="Sprite2D" parent="Wind" unique_id=941957744]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=941957744]
