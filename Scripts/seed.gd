@@ -1,11 +1,25 @@
 extends Node2D
+@onready var sprite_2d: Sprite2D = $Wind/Sprite2D
 
+var _seedTextureId : int = 0;
+# var _seedManager : # get seed manager in ready
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# _seedManager = GetSeedManager
+	
+	sprite_2d.scale = sprite_2d.scale / 6
+	#_seedTextureId = randi_range(0, _seedManager.GetMaxSeeds)
+	#sprite_2d.Texture = getTexture() # this will error until the seed manager is implemented
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	# TODO : add movement stuff here
+	pass
+
+func getTexture() -> Resource:
+	# TODO : add implementation
+	return null
 	pass
