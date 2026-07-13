@@ -6,7 +6,7 @@ var mainPos : Vector2 = position
 var windowBounds: RectangleShape2D
 var windowCenter: Vector2
 
-var _seedTextureId : int = 0;
+var _seedTextureId : int;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

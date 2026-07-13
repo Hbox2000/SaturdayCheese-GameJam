@@ -19,6 +19,7 @@ func _process(delta: float) -> void:
 
 func spawnSeed(seedId: int) -> void:
 	var newSeed = seedScene.instantiate()
+	newSeed._seedTextureId = 0
 	newSeed.windowBounds = windowBounds
 	newSeed.windowCenter = position
 	newSeed.position.y = randi_range(position.y - windowBounds.size.y / 2, position.y + windowBounds.size.y / 2)

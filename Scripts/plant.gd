@@ -14,7 +14,6 @@ func _ready() -> void:
 # Basically tick
 func _process(delta: float) -> void:
 	pass
-	print("hi")
 	if Input.is_action_just_pressed("ui_right"):
 		grow()
 	
