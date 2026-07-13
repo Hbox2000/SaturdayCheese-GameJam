@@ -7,8 +7,52 @@
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1181185567]
 
-[node name="Pot" parent="." unique_id=1865387772 instance=ExtResource("2_qxrlw")]
-position = Vector2(497, 269)
+[node name="Seed" parent="." unique_id=625082182 instance=ExtResource("1_ebmjs")]
+position = Vector2(-580, -317)
 
-[node name="Window" parent="." unique_id=654464002 instance=ExtResource("3_wrm1d")]
-position = Vector2(0, 1)
+[node name="Pots" type="Node2D" parent="." unique_id=1137006796]
+
+[node name="Pot1" parent="Pots" unique_id=925827981 instance=ExtResource("2_qxrlw")]
+position = Vector2(-360, 132)
+
+[node name="Pot2" parent="Pots" unique_id=1865387772 instance=ExtResource("2_qxrlw")]
+position = Vector2(-257, 132)
+
+[node name="Pot3" parent="Pots" unique_id=1207048525 instance=ExtResource("2_qxrlw")]
+position = Vector2(-154, 132)
+
+[node name="Pot4" parent="Pots" unique_id=981761655 instance=ExtResource("2_qxrlw")]
+position = Vector2(-51, 132)
+
+[node name="Pot5" parent="Pots" unique_id=1934089559 instance=ExtResource("2_qxrlw")]
+position = Vector2(52, 132)
+
+[node name="Pot6" parent="Pots" unique_id=1716335851 instance=ExtResource("2_qxrlw")]
+position = Vector2(155, 132)
+
+[node name="Pot7" parent="Pots" unique_id=1945705440 instance=ExtResource("2_qxrlw")]
+position = Vector2(258, 131)
+
+[node name="Pot8" parent="Pots" unique_id=1945713499 instance=ExtResource("2_qxrlw")]
+position = Vector2(361, 131)
+
+[node name="Pot9" parent="Pots" unique_id=1641332824 instance=ExtResource("2_qxrlw")]
+position = Vector2(-308, 223)
+
+[node name="Pot10" parent="Pots" unique_id=988228364 instance=ExtResource("2_qxrlw")]
+position = Vector2(-205, 223)
+
+[node name="Pot11" parent="Pots" unique_id=1176959395 instance=ExtResource("2_qxrlw")]
+position = Vector2(-102, 223)
+
+[node name="Pot12" parent="Pots" unique_id=1185986772 instance=ExtResource("2_qxrlw")]
+position = Vector2(1, 223)
+
+[node name="Pot13" parent="Pots" unique_id=61957564 instance=ExtResource("2_qxrlw")]
+position = Vector2(104, 223)
+
+[node name="Pot14" parent="Pots" unique_id=2678538 instance=ExtResource("2_qxrlw")]
+position = Vector2(207, 223)
+
+[node name="Pot15" parent="Pots" unique_id=12889024 instance=ExtResource("2_qxrlw")]
+position = Vector2(310, 222)
