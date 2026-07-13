@@ -9,6 +9,8 @@ var _tween: Tween
 var _can_grab : bool = true
 var _pick_up_Cooldown_Timer : float = 0.3
 
+var _Grab_Range : float = 50
+
 #var mouse_position : 
 
 func _ready() -> void:
@@ -18,7 +20,7 @@ func _process(_delta: float) -> void:
 	if _is_following:
 		global_position = get_global_mouse_position()
 	
-	if not _is_following and get_global_mouse_position().distance_to(position) < 90 and _can_grab:
+	if not _is_following and get_global_mouse_position().distance_to(position) < _Grab_Range and _can_grab:
 		_pick_up()
 		_can_grab = false
 	
