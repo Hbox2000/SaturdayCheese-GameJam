@@ -6,6 +6,10 @@ class_name Tool
 var _original_position: Vector2
 var _is_following: bool = false
 var _tween: Tween
+var _can_grab : bool = true
+var _pick_up_Cooldown_Timer : float = 0.3
+
+#var mouse_position : 
 
 func _ready() -> void:
 	_original_position = global_position
@@ -14,13 +18,23 @@ func _process(_delta: float) -> void:
 	if _is_following:
 		global_position = get_global_mouse_position()
 	
-	if not _is_following and Input.is_action_just_pressed("left_click"):
+	if not _is_following and get_global_mouse_position().distance_to(position) < 90 and _can_grab:
 		_pick_up()
+		_can_grab = false
 	
 	if _is_following and Input.is_action_just_pressed("right_click"):
 		_release()
 		get_viewport().set_input_as_handled()
-
+		_can_grab = false
+	
+	if not _can_grab and _pick_up_Cooldown_Timer >= 0 : 
+		_pick_up_Cooldown_Timer = _pick_up_Cooldown_Timer - _delta
+		if _pick_up_Cooldown_Timer <= 0 :
+			_can_grab = true
+			_pick_up_Cooldown_Timer = 0.3
+			
+	print (get_global_mouse_position().distance_to(position))
+	
 func is_following() -> bool:
 	return _is_following
 
