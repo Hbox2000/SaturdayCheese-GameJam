@@ -21,10 +21,6 @@ func _process(_delta: float) -> void:
 	if _is_following:
 		global_position = get_global_mouse_position()
 	
-	if not _is_following and get_global_mouse_position().distance_to(position) < _Grab_Range and _can_grab and Input.is_action_just_pressed("left_click"):
-		_pick_up()
-		_can_grab = false
-	
 	if _is_following and Input.is_action_just_pressed("right_click"):
 		_release()
 		get_viewport().set_input_as_handled()
@@ -37,7 +33,13 @@ func _process(_delta: float) -> void:
 			_pick_up_Cooldown_Timer = 0.3
 			
 	print (get_global_mouse_position().distance_to(position))
-	
+
+func _on_pickup_hitbox_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			_pick_up()
+			_can_grab = false
+
 func is_following() -> bool:
 	return _is_following
 

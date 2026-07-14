@@ -11,12 +11,15 @@ size = Vector2(42, 40)
 script = ExtResource("2_ky24w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0" unique_id=1215327979]
-position = Vector2(80, -46)
+position = Vector2(52, -37)
 shape = SubResource("RectangleShape2D_ime0x")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="1" unique_id=1462248705]
-position = Vector2(45, -9)
+position = Vector2(17, 0)
 texture = ExtResource("3_0rmr2")
 
 [node name="SeedPlacement" type="Node2D" parent="." index="2" unique_id=745169568]
-position = Vector2(78, -44)
+position = Vector2(50, -35)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PickupHitbox" parent_id_path=PackedInt32Array(459994866) index="0" unique_id=438917424]
+polygon = PackedVector2Array(-43, 56, 31, -23, 73, -40, 40, -72, 23, -32, -51, 50)

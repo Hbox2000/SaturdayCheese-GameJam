@@ -7,7 +7,7 @@
 size = Vector2(9, 2)
 
 [node name="Pot" type="Area2D" unique_id=1789276842 groups=["pot"]]
-z_index = 4
+z_index = 2
 script = ExtResource("1_rj0eo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1956047614]

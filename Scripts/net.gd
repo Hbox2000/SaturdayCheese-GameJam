@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 	if capturedSeed and Input.is_action_just_pressed("left_click"):
 		var pot := _find_overlapping_pot()
 		if pot and not pot.hasPlant:
-			pot.addPlant(capturedSeed.seedTextureId, 0)
+			pot.addPlant(capturedSeed.seedTextureId, 1)
 			capturedSeed.queue_free()
 			capturedSeed = null
 	
@@ -54,4 +54,4 @@ func _on_returned() -> void:
 	if capturedSeed:
 		capturedSeed.queue_free()
 		capturedSeed = null
-	z_index = 1
+	z_index = 3

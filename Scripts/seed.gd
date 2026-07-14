@@ -12,7 +12,7 @@ var seedTextureId : int;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	mainPos = position
-	sprite_2d.scale = sprite_2d.scale / 12
+	sprite_2d.scale = sprite_2d.scale / 6
 	seedTextureId = randi_range(0, cropManager.maxSeedCount() - 1)
 	sprite_2d.texture = getTexture() # this will error until the seed manager is implemented
 

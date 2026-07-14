@@ -2,8 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://dupkpwef6c11r" path="res://Scenes/tool.tscn" id="1_hj3hy"]
 [ext_resource type="Texture2D" uid="uid://flgkgmuf472f" path="res://Assets/FinalAssets/Scissors.png" id="2_643n5"]
+[ext_resource type="Script" uid="uid://no7uviq80dnb" path="res://Scripts/scissors.gd" id="2_qywwh"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qywwh"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ui3f"]
+size = Vector2(38, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwaqj"]
+atlas = ExtResource("2_643n5")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmxyp"]
 atlas = ExtResource("2_643n5")
 region = Rect2(0, 0, 128, 128)
 
@@ -15,25 +23,43 @@ region = Rect2(128, 0, 128, 128)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qywwh")
+"texture": SubResource("AtlasTexture_wwaqj")
 }, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmxyp")
+}],
+"loop": 0,
+"name": &"cut",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3v7gi")
 }],
 "loop": 0,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmxyp")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ui3f"]
-size = Vector2(38, 50)
-
 [node name="Scissors" unique_id=321682570 instance=ExtResource("1_hj3hy")]
+script = ExtResource("2_qywwh")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0" unique_id=1606681894]
-sprite_frames = SubResource("SpriteFrames_xwxj8")
-frame_progress = 0.6151432
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=22943420]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0" unique_id=22943420]
 position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_2ui3f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1" unique_id=1606681894]
+rotation = 3.1415927
+sprite_frames = SubResource("SpriteFrames_xwxj8")
+animation = &"cut"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PickupHitbox" parent_id_path=PackedInt32Array(459994866) index="0" unique_id=1250758603]
+polygon = PackedVector2Array(-22, -43, 21, -43, 21, 39, -22, 39)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkxthi6pvwxme"
-path="res://.godot/imported/3_Shitflower.png-df0c6555f3e836648112a855f09b6316.ctex"
+uid="uid://cgblmjrp5dgg6"
+path="res://.godot/imported/2_Rose.png-3a525d14bac98f954ae449a5ff56fb14.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Plants/1_Shitflower/3_Shitflower.png"
-dest_files=["res://.godot/imported/3_Shitflower.png-df0c6555f3e836648112a855f09b6316.ctex"]
+source_file="res://Assets/Plants/3_Rose/2_Rose.png"
+dest_files=["res://.godot/imported/2_Rose.png-3a525d14bac98f954ae449a5ff56fb14.ctex"]
 
 [params]
 

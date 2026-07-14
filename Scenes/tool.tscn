@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://dupkpwef6c11r"]
 
-[ext_resource type="Script" uid="uid://no7uviq80dnb" path="res://Scripts/scissors.gd" id="1_v307u"]
+[ext_resource type="Script" uid="uid://eivsqikg67cv" path="res://Scripts/tool.gd" id="1_v307u"]
 
 [node name="Tool" type="Area2D" unique_id=321682570]
 z_index = 5
 script = ExtResource("1_v307u")
+
+[node name="PickupHitbox" type="Area2D" parent="." unique_id=459994866]
+
+[connection signal="input_event" from="PickupHitbox" to="." method="_on_pickup_hitbox_input_event"]

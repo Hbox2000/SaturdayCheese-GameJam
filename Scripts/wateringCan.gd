@@ -28,3 +28,9 @@ func _find_overlapping_pot() -> Node2D:
 		if area.is_in_group("pot"):
 			return area
 	return null
+
+func _on_picked_up() -> void:
+	z_index = 5
+
+func _on_returned() -> void:
+	z_index = 3

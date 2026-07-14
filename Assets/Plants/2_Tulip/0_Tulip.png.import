@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkxthi6pvwxme"
-path="res://.godot/imported/3_Shitflower.png-df0c6555f3e836648112a855f09b6316.ctex"
+uid="uid://dt8vfwrrrq7no"
+path="res://.godot/imported/0_Tulip.png-7f3df11475616e99278c2634597e3617.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Plants/1_Shitflower/3_Shitflower.png"
-dest_files=["res://.godot/imported/3_Shitflower.png-df0c6555f3e836648112a855f09b6316.ctex"]
+source_file="res://Assets/Plants/2_Tulip/0_Tulip.png"
+dest_files=["res://.godot/imported/0_Tulip.png-7f3df11475616e99278c2634597e3617.ctex"]
 
 [params]
 

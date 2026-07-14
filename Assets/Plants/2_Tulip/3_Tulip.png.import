@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dds5mk1kdpjsl"
-path="res://.godot/imported/DebugBackground.png-cee40a24afbf6588113c102d8d41bbec.ctex"
+uid="uid://baxaa0wgnylad"
+path="res://.godot/imported/3_Tulip.png-62d9dfb571da87aaeb16e8078c4b4664.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/DebugAssets/DebugBackground.png"
-dest_files=["res://.godot/imported/DebugBackground.png-cee40a24afbf6588113c102d8d41bbec.ctex"]
+source_file="res://Assets/Plants/2_Tulip/3_Tulip.png"
+dest_files=["res://.godot/imported/3_Tulip.png-62d9dfb571da87aaeb16e8078c4b4664.ctex"]
 
 [params]
 
