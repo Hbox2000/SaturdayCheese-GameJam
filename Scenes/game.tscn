@@ -224,7 +224,7 @@ position = Vector2(109, 41)
 position = Vector2(186, 42)
 
 [node name="Net" parent="." unique_id=371491515 instance=ExtResource("4_3dryh")]
-position = Vector2(224, -90)
+position = Vector2(180, -56)
 
 [node name="WindyBackground" type="AnimatedSprite2D" parent="." unique_id=1827897407]
 position = Vector2(0, -61)
@@ -232,4 +232,4 @@ sprite_frames = SubResource("SpriteFrames_oki1f")
 frame_progress = 0.4956347
 
 [node name="WateringCan" parent="." unique_id=321682570 instance=ExtResource("38_6uxt2")]
-position = Vector2(-237, -77)
+position = Vector2(-256, -117)

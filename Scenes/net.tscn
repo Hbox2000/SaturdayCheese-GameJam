@@ -11,11 +11,12 @@ size = Vector2(42, 40)
 script = ExtResource("2_ky24w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0" unique_id=1215327979]
-position = Vector2(35, -41)
+position = Vector2(80, -46)
 shape = SubResource("RectangleShape2D_ime0x")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="1" unique_id=1462248705]
+position = Vector2(45, -9)
 texture = ExtResource("3_0rmr2")
 
 [node name="SeedPlacement" type="Node2D" parent="." index="2" unique_id=745169568]
-position = Vector2(33, -39)
+position = Vector2(78, -44)

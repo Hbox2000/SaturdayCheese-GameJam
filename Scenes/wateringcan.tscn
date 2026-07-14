@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://ci4bp6lf2pv1v" path="res://Scripts/wateringCan.gd" id="2_n4qsc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n4qsc"]
-size = Vector2(22, 40)
+size = Vector2(59, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fxu28"]
 atlas = ExtResource("2_7aw4m")
@@ -24,7 +24,12 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fxu28")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7aw4m")
 }, {
@@ -32,7 +37,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_n4qsc")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"Use",
 "speed": 5.0
 }]
 
@@ -40,9 +45,13 @@ animations = [{
 script = ExtResource("2_n4qsc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0" unique_id=1300051549]
-position = Vector2(-46, -14)
+position = Vector2(-21.5, 56)
 shape = SubResource("RectangleShape2D_n4qsc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1" unique_id=1103865247]
-position = Vector2(-32, -29)
+position = Vector2(-5, 32)
 sprite_frames = SubResource("SpriteFrames_ime0x")
+animation = &"Idle"
+
+[node name="Timer" type="Timer" parent="." index="2" unique_id=1071020280]
+one_shot = true

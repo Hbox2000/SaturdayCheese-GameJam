@@ -4,6 +4,7 @@ class_name Tool
 @export var return_duration: float = 0.3
 
 var _original_position: Vector2
+
 var _is_following: bool = false
 var _tween: Tween
 var _can_grab : bool = true
