@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kvnpbyjpftks"
-path="res://.godot/imported/2_TestThing.png-e1b373746711329e3cf4f3aadff806ab.ctex"
+uid="uid://bn3kbyo61gaps"
+path="res://.godot/imported/frame0001.png-397ae0c9c1882c68a2bf694637371885.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Plants/1_TestThing/2_TestThing.png"
-dest_files=["res://.godot/imported/2_TestThing.png-e1b373746711329e3cf4f3aadff806ab.ctex"]
+source_file="res://Assets/FinalAssets/WindBackground/frame0001.png"
+dest_files=["res://.godot/imported/frame0001.png-397ae0c9c1882c68a2bf694637371885.ctex"]
 
 [params]
 

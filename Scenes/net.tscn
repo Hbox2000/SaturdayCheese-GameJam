@@ -8,7 +8,6 @@
 size = Vector2(42, 40)
 
 [node name="Net" unique_id=371491515 instance=ExtResource("1_0ln44")]
-z_index = 6
 script = ExtResource("2_ky24w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0" unique_id=1215327979]

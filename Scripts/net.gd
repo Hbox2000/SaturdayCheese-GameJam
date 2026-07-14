@@ -2,15 +2,21 @@ extends "res://Scripts/tool.gd"
 
 @onready var seed_placement: Node2D = $SeedPlacement
 
-var captured_seed: Node2D = null
+var overlappedSeed: Node2D = null
+var capturedSeed: Node2D = null
 
 func _process(delta: float) -> void:
-	if captured_seed and Input.is_action_just_pressed("left_click"):
+	if overlappedSeed and not capturedSeed and Input.is_action_pressed("left_click"):
+		capturedSeed = overlappedSeed
+		overlappedSeed = null
+		_capture_seed.call_deferred(capturedSeed)
+	
+	if capturedSeed and Input.is_action_just_pressed("left_click"):
 		var pot := _find_overlapping_pot()
 		if pot and not pot.hasPlant:
-			pot.addPlant(captured_seed.seedTextureId, 0)
-			captured_seed.queue_free()
-			captured_seed = null
+			pot.addPlant(capturedSeed.seedTextureId, 0)
+			capturedSeed.queue_free()
+			capturedSeed = null
 	
 	super._process(delta)
 
@@ -20,9 +26,12 @@ func _ready() -> void:
 	area_entered.connect(_on_area_entered)
 
 func _on_area_entered(area: Area2D) -> void:
-	if is_following() and captured_seed == null and area.is_in_group("seed"):
-		captured_seed = area
-		_capture_seed.call_deferred(area)
+	if is_following() and area.is_in_group("seed"):
+		overlappedSeed = area
+
+func _on_area_exited(area: Area2D) -> void:
+	if overlappedSeed == area:
+		overlappedSeed = null
 
 func _capture_seed(capturedSeed: Area2D) -> void:
 	var old_parent := capturedSeed.get_parent()
@@ -38,7 +47,11 @@ func _find_overlapping_pot() -> Node2D:
 			return area
 	return null
 
+func _on_picked_up() -> void:
+	z_index = 5
+
 func _on_returned() -> void:
-	if captured_seed:
-		captured_seed.queue_free()
-		captured_seed = null
+	if capturedSeed:
+		capturedSeed.queue_free()
+		capturedSeed = null
+	z_index = 1
