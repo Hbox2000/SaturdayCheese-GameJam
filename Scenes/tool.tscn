@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dupkpwef6c11r"]
 
-[ext_resource type="Script" uid="uid://eivsqikg67cv" path="res://Scripts/tool.gd" id="1_v307u"]
+[ext_resource type="Script" uid="uid://no7uviq80dnb" path="res://Scripts/scissors.gd" id="1_v307u"]
 
 [node name="Tool" type="Area2D" unique_id=321682570]
 z_index = 5

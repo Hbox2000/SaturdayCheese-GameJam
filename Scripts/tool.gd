@@ -20,7 +20,7 @@ func _process(_delta: float) -> void:
 	if _is_following:
 		global_position = get_global_mouse_position()
 	
-	if not _is_following and get_global_mouse_position().distance_to(position) < _Grab_Range and _can_grab:
+	if not _is_following and get_global_mouse_position().distance_to(position) < _Grab_Range and _can_grab and Input.is_action_just_pressed("left_click"):
 		_pick_up()
 		_can_grab = false
 	
