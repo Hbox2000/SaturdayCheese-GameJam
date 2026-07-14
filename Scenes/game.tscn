@@ -42,7 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://cmnvyeyutth5g" path="res://Scenes/scissors.tscn" id="39_bwj6o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ime0x"]
-size = Vector2(280, 211)
+size = Vector2(280, 202)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oki1f"]
 animations = [{
@@ -175,7 +175,7 @@ wait_time = 0.5
 one_shot = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Window" unique_id=1261866246]
-position = Vector2(0, 1.5)
+position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_ime0x")
 
 [node name="Tools" type="Node2D" parent="." unique_id=2082507356]

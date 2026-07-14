@@ -24,7 +24,7 @@ func spawnSeed(seedId: int) -> void:
 	newSeed.windowBounds = windowBounds
 	newSeed.windowCenter = position
 	newSeed.position.y = randf_range(collision_shape.position.y - windowBounds.size.y / 2, collision_shape.position.y + windowBounds.size.y / 2)
-	newSeed.position.x = collision_shape.position.x - windowBounds.size.x / 2 - 20
+	newSeed.position.x = collision_shape.position.x - windowBounds.size.x / 2 - 10
 	
 	add_child(newSeed)
 	

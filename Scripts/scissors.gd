@@ -2,6 +2,7 @@ extends "res://Scripts/tool.gd"
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var seed_destroyed: AudioStreamPlayer = $SeedDestroyed
+@onready var scissors: AudioStreamPlayer = $Scissors
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,12 +12,14 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("left_click") :
-		var pot := _find_overlapping_pot()
-		if pot != null :
+	if is_following():
+		if Input.is_action_just_pressed("left_click") :
+			var pot := _find_overlapping_pot()
+			if pot != null and pot.hasPlant:
+				pot.removePlant()
+				seed_destroyed.play()
 			animated_sprite_2d.play("cut")
-			pot.removePlant()
-			seed_destroyed.play()
+			scissors.play()
 	
 	super._process(delta)
 

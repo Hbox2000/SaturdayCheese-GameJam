@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://flgkgmuf472f" path="res://Assets/FinalAssets/Scissors.png" id="2_643n5"]
 [ext_resource type="Script" uid="uid://no7uviq80dnb" path="res://Scripts/scissors.gd" id="2_qywwh"]
 [ext_resource type="AudioStream" uid="uid://da7cg741gcjmd" path="res://Assets/SFX/seed destroyed.wav" id="4_3v7gi"]
+[ext_resource type="AudioStream" uid="uid://bbppbwtki4xmb" path="res://Assets/SFX/scissors.wav" id="5_kmxyp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ui3f"]
 size = Vector2(38, 50)
@@ -68,3 +69,7 @@ polygon = PackedVector2Array(-22, -43, 21, -43, 21, 39, -22, 39)
 [node name="SeedDestroyed" type="AudioStreamPlayer" parent="." index="3" unique_id=876410569]
 stream = ExtResource("4_3v7gi")
 volume_db = -7.298
+
+[node name="Scissors" type="AudioStreamPlayer" parent="." index="4" unique_id=902317032]
+stream = ExtResource("5_kmxyp")
+volume_db = -13.0
