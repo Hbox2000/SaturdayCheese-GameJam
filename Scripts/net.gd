@@ -6,7 +6,7 @@ var overlappedSeed: Node2D = null
 var capturedSeed: Node2D = null
 
 func _process(delta: float) -> void:
-	if overlappedSeed and not capturedSeed and Input.is_action_pressed("left_click"):
+	if overlappedSeed and not capturedSeed and Input.is_action_pressed("left_click") and is_following():
 		capturedSeed = overlappedSeed
 		overlappedSeed = null
 		_capture_seed.call_deferred(capturedSeed)

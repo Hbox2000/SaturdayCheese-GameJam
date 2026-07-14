@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://drrsx6m60nuy5" path="res://Assets/FinalAssets/WindBackground/frame0028.png" id="33_jcn4n"]
 [ext_resource type="Texture2D" uid="uid://r0t01u721psd" path="res://Assets/FinalAssets/WindBackground/frame0029.png" id="34_l4kai"]
 [ext_resource type="Texture2D" uid="uid://b7wb7q8qp5tyn" path="res://Assets/FinalAssets/WindBackground/frame0030.png" id="35_kcoun"]
+[ext_resource type="PackedScene" uid="uid://bucpe2f4wfgqp" path="res://Scenes/wateringcan.tscn" id="38_6uxt2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ime0x"]
 size = Vector2(280, 211)
@@ -223,10 +224,12 @@ position = Vector2(109, 41)
 position = Vector2(186, 42)
 
 [node name="Net" parent="." unique_id=371491515 instance=ExtResource("4_3dryh")]
-z_index = 5
 position = Vector2(224, -90)
 
 [node name="WindyBackground" type="AnimatedSprite2D" parent="." unique_id=1827897407]
 position = Vector2(0, -61)
 sprite_frames = SubResource("SpriteFrames_oki1f")
 frame_progress = 0.4956347
+
+[node name="WateringCan" parent="." unique_id=321682570 instance=ExtResource("38_6uxt2")]
+position = Vector2(-237, -77)

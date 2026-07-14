@@ -2,16 +2,47 @@
 
 [ext_resource type="PackedScene" uid="uid://dupkpwef6c11r" path="res://Scenes/tool.tscn" id="1_fxu28"]
 [ext_resource type="Texture2D" uid="uid://c0nxc7vgex48q" path="res://Assets/FinalAssets/WateringCan.png" id="2_7aw4m"]
+[ext_resource type="Script" uid="uid://ci4bp6lf2pv1v" path="res://Scripts/wateringCan.gd" id="2_n4qsc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n4qsc"]
-size = Vector2(69, 60)
+size = Vector2(22, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxu28"]
+atlas = ExtResource("2_7aw4m")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7aw4m"]
+atlas = ExtResource("2_7aw4m")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4qsc"]
+atlas = ExtResource("2_7aw4m")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ime0x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxu28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7aw4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4qsc")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="WateringCan" unique_id=321682570 instance=ExtResource("1_fxu28")]
+script = ExtResource("2_n4qsc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0" unique_id=1300051549]
-position = Vector2(-1.5, 5)
+position = Vector2(-46, -14)
 shape = SubResource("RectangleShape2D_n4qsc")
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="1" unique_id=1268478910]
-position = Vector2(-33, -30)
-texture = ExtResource("2_7aw4m")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1" unique_id=1103865247]
+position = Vector2(-32, -29)
+sprite_frames = SubResource("SpriteFrames_ime0x")
