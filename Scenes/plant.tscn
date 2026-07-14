@@ -2,6 +2,38 @@
 
 [ext_resource type="Script" uid="uid://bw0a8bcnppwfv" path="res://Scripts/plant.gd" id="1_fgu4o"]
 [ext_resource type="Texture2D" uid="uid://b6ek3c6t81vop" path="res://Assets/Plants/1_TestThing/0_TestThing.png" id="2_6gypx"]
+[ext_resource type="Texture2D" uid="uid://b112otlnin1x1" path="res://Assets/FinalAssets/SweatingAnim/sweating_anim1.png" id="3_2oxh0"]
+[ext_resource type="Texture2D" uid="uid://442h3htr8pjm" path="res://Assets/FinalAssets/SweatingAnim/sweating_anim2.png" id="4_a36j5"]
+[ext_resource type="Texture2D" uid="uid://dps3o4igsp1xc" path="res://Assets/FinalAssets/SweatingAnim/sweating_anim3.png" id="5_guixl"]
+[ext_resource type="Texture2D" uid="uid://dg22mhexuhqoh" path="res://Assets/FinalAssets/SweatingAnim/sweating_anim4.png" id="6_thy18"]
+[ext_resource type="Texture2D" uid="uid://cixyhaq4i75j0" path="res://Assets/FinalAssets/SweatingAnim/sweating_anim5.png" id="7_xvlid"]
+[ext_resource type="Texture2D" uid="uid://dmlj6sbjfx87k" path="res://Assets/FinalAssets/SweatingAnim/sweating_anim6.png" id="8_msuq2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o8v4g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2oxh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a36j5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_guixl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_thy18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xvlid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_msuq2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 12.0
+}]
 
 [node name="Plant" type="Node2D" unique_id=159524348]
 script = ExtResource("1_fgu4o")
@@ -13,3 +45,9 @@ texture = ExtResource("2_6gypx")
 [node name="GrowTimer" type="Timer" parent="." unique_id=577475896]
 wait_time = 10.0
 one_shot = true
+
+[node name="WantWaterAnim" type="AnimatedSprite2D" parent="." unique_id=2002424208]
+position = Vector2(-28, -35)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_o8v4g")
+frame_progress = 0.56040925
