@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcglx0g6rijt2"
-path="res://.godot/imported/2_DebugPlant.png-d431af1cd8b472620a91342ba1f01856.ctex"
+uid="uid://nyx5tra3uws6"
+path="res://.godot/imported/0_Sunflower.png-c01fa89af13740cc532f4b14b660ca22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Plants/0_DebugPlant/2_DebugPlant.png"
-dest_files=["res://.godot/imported/2_DebugPlant.png-d431af1cd8b472620a91342ba1f01856.ctex"]
+source_file="res://Assets/Plants/0_Sunflower/0_Sunflower.png"
+dest_files=["res://.godot/imported/0_Sunflower.png-c01fa89af13740cc532f4b14b660ca22.ctex"]
 
 [params]
 
