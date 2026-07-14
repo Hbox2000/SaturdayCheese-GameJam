@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kvnpbyjpftks"
-path="res://.godot/imported/2_TestThing.png-e1b373746711329e3cf4f3aadff806ab.ctex"
+uid="uid://442h3htr8pjm"
+path="res://.godot/imported/sweating_anim2.png-d46e27653c13aeee253a4f7510807e83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Plants/1_TestThing/2_TestThing.png"
-dest_files=["res://.godot/imported/2_TestThing.png-e1b373746711329e3cf4f3aadff806ab.ctex"]
+source_file="res://Assets/FinalAssets/SweatingAnim/sweating_anim2.png"
+dest_files=["res://.godot/imported/sweating_anim2.png-d46e27653c13aeee253a4f7510807e83.ctex"]
 
 [params]
 
