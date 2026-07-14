@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://7pllmm3y1gt3"]
+
+[ext_resource type="Script" uid="uid://i8kssggfhn16" path="res://Scripts/seed.gd" id="1_h627t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nsswm"]
+
+[node name="Seed" type="Area2D" unique_id=1735421801 groups=["seed"]]
+script = ExtResource("1_h627t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=900259258]
+shape = SubResource("RectangleShape2D_nsswm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1404331504]

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dqfbkw0idq5u5"]
+
+[ext_resource type="Script" uid="uid://bw0a8bcnppwfv" path="res://Scripts/plant.gd" id="1_fgu4o"]
+[ext_resource type="Texture2D" uid="uid://dv8n3bg65enwb" path="res://Assets/Plants/0_Sunflower/3_Sunflower.png" id="2_8frh5"]
+[ext_resource type="Texture2D" uid="uid://c8rq5kdindq5h" path="res://Assets/FinalAssets/droplet.png" id="3_wt21e"]
+
+[node name="Plant" type="Node2D" unique_id=159524348]
+script = ExtResource("1_fgu4o")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1709508351]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_8frh5")
+
+[node name="WaterDrops" type="Node2D" parent="." unique_id=448383837]
+
+[node name="WaterDropSeed" type="Sprite2D" parent="WaterDrops" unique_id=2048262845]
+position = Vector2(0, 10)
+texture = ExtResource("3_wt21e")
+
+[node name="WaterDropSprout" type="Sprite2D" parent="WaterDrops" unique_id=639776861]
+texture = ExtResource("3_wt21e")
+
+[node name="WaterDropJuv" type="Sprite2D" parent="WaterDrops" unique_id=2075421181]
+position = Vector2(0, -19)
+texture = ExtResource("3_wt21e")
+
+[node name="GrowTimer" type="Timer" parent="." unique_id=577475896]
+wait_time = 10.0
+one_shot = true
