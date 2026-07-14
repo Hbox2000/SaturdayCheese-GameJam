@@ -200,6 +200,11 @@ z_index = 4
 position = Vector2(-489, -82)
 texture = ExtResource("8_bwj6o")
 
+[node name="Hook4" type="Sprite2D" parent="Hooks" unique_id=6356751]
+z_index = 4
+position = Vector2(-560, -6)
+texture = ExtResource("8_bwj6o")
+
 [node name="Hook2" type="Sprite2D" parent="Hooks" unique_id=1409339317]
 z_index = 4
 position = Vector2(-52, -123)

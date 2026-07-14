@@ -1,5 +1,7 @@
 extends Node2D
 
+var holdingTool: bool = false
+
 class plantTextures:
 	var seedTexture: Resource
 	var seedInSoil: Resource

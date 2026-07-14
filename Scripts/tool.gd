@@ -35,10 +35,12 @@ func _process(_delta: float) -> void:
 	print (get_global_mouse_position().distance_to(position))
 
 func _on_pickup_hitbox_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			_pick_up()
-			_can_grab = false
+	if not cropManager.holdingTool:
+		if event is InputEventMouseButton:
+			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+				cropManager.holdingTool = true
+				_pick_up()
+				_can_grab = false
 
 func is_following() -> bool:
 	return _is_following
@@ -50,6 +52,7 @@ func _pick_up() -> void:
 	_on_picked_up()
 
 func _release() -> void:
+	cropManager.holdingTool = false
 	_is_following = false
 	_on_released()
 	_return_to_origin()

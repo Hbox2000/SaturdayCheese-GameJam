@@ -2,6 +2,9 @@ extends "res://Scripts/tool.gd"
 
 @onready var seed_placement: Node2D = $SeedPlacement
 
+@onready var succesful_catch: AudioStreamPlayer = $SuccesfulCatch
+@onready var seed_planted: AudioStreamPlayer = $SeedPlanted
+
 var overlappedSeed: Node2D = null
 var capturedSeed: Node2D = null
 
@@ -17,6 +20,7 @@ func _process(delta: float) -> void:
 			pot.addPlant(capturedSeed.seedTextureId, 1)
 			capturedSeed.queue_free()
 			capturedSeed = null
+			seed_planted.play()
 	
 	super._process(delta)
 
@@ -40,6 +44,7 @@ func _capture_seed(capturedSeed: Area2D) -> void:
 	add_child(capturedSeed)
 	capturedSeed.position = seed_placement.position
 	capturedSeed.windActive = false
+	succesful_catch.play()
 
 func _find_overlapping_pot() -> Node2D:
 	for area in get_overlapping_areas():

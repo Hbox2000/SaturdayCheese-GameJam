@@ -1,6 +1,7 @@
 extends "res://Scripts/tool.gd"
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var seed_destroyed: AudioStreamPlayer = $SeedDestroyed
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,6 +16,7 @@ func _process(delta: float) -> void:
 		if pot != null :
 			animated_sprite_2d.play("cut")
 			pot.removePlant()
+			seed_destroyed.play()
 	
 	super._process(delta)
 
