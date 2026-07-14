@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://cir5v0ri6kidm"]
 
 [ext_resource type="PackedScene" uid="uid://dupkpwef6c11r" path="res://Scenes/tool.tscn" id="1_0ln44"]
-[ext_resource type="Texture2D" uid="uid://bdp31cp818vl6" path="res://Assets/DebugAssets/debugNet.png" id="2_ky24w"]
+[ext_resource type="Script" uid="uid://ck0awpjmdx65i" path="res://Scripts/net.gd" id="2_ky24w"]
+[ext_resource type="Texture2D" uid="uid://bhwjoppbrjip5" path="res://Assets/FinalAssets/LacrosseStick.png" id="3_0rmr2"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ui3f"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ime0x"]
+size = Vector2(42, 40)
 
 [node name="Net" unique_id=371491515 instance=ExtResource("1_0ln44")]
+script = ExtResource("2_ky24w")
 
-[node name="Sprite2D" type="Sprite2D" parent="." index="0" unique_id=1787135597]
-texture = ExtResource("2_ky24w")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0" unique_id=1215327979]
+position = Vector2(35, -41)
+shape = SubResource("RectangleShape2D_ime0x")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D" index="0" unique_id=871983417]
-position = Vector2(30.215, -3.67)
-scale = Vector2(1.735, 3.605)
+[node name="Sprite2D" type="Sprite2D" parent="." index="1" unique_id=1462248705]
+texture = ExtResource("3_0rmr2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" index="0" unique_id=1026956610]
-shape = SubResource("RectangleShape2D_2ui3f")
-
-[connection signal="area_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="body_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="SeedPlacement" type="Node2D" parent="." index="2" unique_id=745169568]
+position = Vector2(33, -39)

@@ -1,14 +1,232 @@
 [gd_scene format=3 uid="uid://dmag40c803yf3"]
 
-[ext_resource type="PackedScene" uid="uid://ctpvwjw5hufp7" path="res://Scenes/pot.tscn" id="2_qxrlw"]
-[ext_resource type="PackedScene" uid="uid://blj3123hay32q" path="res://Scenes/window.tscn" id="3_wrm1d"]
+[ext_resource type="Texture2D" uid="uid://euxyxkusgmie" path="res://Assets/FinalAssets/Backdrop.png" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://c4qxpqftefht5" path="res://Scripts/game.gd" id="1_i26dy"]
+[ext_resource type="Script" uid="uid://b3lxfe2cr8wef" path="res://Scripts/window.gd" id="2_qxrlw"]
+[ext_resource type="Texture2D" uid="uid://ckwb7ylhaeonv" path="res://Assets/FinalAssets/sky.png" id="3_lmoi6"]
+[ext_resource type="PackedScene" uid="uid://ctpvwjw5hufp7" path="res://Scenes/pot.tscn" id="3_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://cir5v0ri6kidm" path="res://Scenes/net.tscn" id="4_3dryh"]
+[ext_resource type="Texture2D" uid="uid://c55lqwkylxnff" path="res://Assets/FinalAssets/WindBackground/frame0000.png" id="5_d3cha"]
+[ext_resource type="Texture2D" uid="uid://bn3kbyo61gaps" path="res://Assets/FinalAssets/WindBackground/frame0001.png" id="6_i26dy"]
+[ext_resource type="Texture2D" uid="uid://dy5tt0t3iduju" path="res://Assets/FinalAssets/WindBackground/frame0002.png" id="7_lmoi6"]
+[ext_resource type="Texture2D" uid="uid://bhsp5p2qrljsq" path="res://Assets/FinalAssets/WindBackground/frame0003.png" id="8_6uxt2"]
+[ext_resource type="Texture2D" uid="uid://clbd35ou357e3" path="res://Assets/FinalAssets/WindBackground/frame0004.png" id="9_ym3tv"]
+[ext_resource type="Texture2D" uid="uid://pqsbehmyf3j7" path="res://Assets/FinalAssets/WindBackground/frame0005.png" id="10_bwj6o"]
+[ext_resource type="Texture2D" uid="uid://c0dna6fyiwa7r" path="res://Assets/FinalAssets/WindBackground/frame0006.png" id="11_f3c8l"]
+[ext_resource type="Texture2D" uid="uid://d0deeup3pds21" path="res://Assets/FinalAssets/WindBackground/frame0007.png" id="12_bu0y5"]
+[ext_resource type="Texture2D" uid="uid://dqp2bmk50snxs" path="res://Assets/FinalAssets/WindBackground/frame0008.png" id="13_6a4tp"]
+[ext_resource type="Texture2D" uid="uid://bglsxl3tgykcv" path="res://Assets/FinalAssets/WindBackground/frame0009.png" id="14_631el"]
+[ext_resource type="Texture2D" uid="uid://cgi30ngfkavqb" path="res://Assets/FinalAssets/WindBackground/frame0010.png" id="15_vs120"]
+[ext_resource type="Texture2D" uid="uid://c2ltf3ues38ie" path="res://Assets/FinalAssets/WindBackground/frame0011.png" id="16_v2cs8"]
+[ext_resource type="Texture2D" uid="uid://clwvvhq2orpc0" path="res://Assets/FinalAssets/WindBackground/frame0012.png" id="17_32sfa"]
+[ext_resource type="Texture2D" uid="uid://d2uduifalngp3" path="res://Assets/FinalAssets/WindBackground/frame0013.png" id="18_titue"]
+[ext_resource type="Texture2D" uid="uid://m3jiejf8jvdv" path="res://Assets/FinalAssets/WindBackground/frame0014.png" id="19_tt7mg"]
+[ext_resource type="Texture2D" uid="uid://b15psru4034xb" path="res://Assets/FinalAssets/WindBackground/frame0015.png" id="20_htg8p"]
+[ext_resource type="Texture2D" uid="uid://cwmvyg5keef2w" path="res://Assets/FinalAssets/WindBackground/frame0016.png" id="21_jcvim"]
+[ext_resource type="Texture2D" uid="uid://dfna4cuiopyec" path="res://Assets/FinalAssets/WindBackground/frame0017.png" id="22_fnkle"]
+[ext_resource type="Texture2D" uid="uid://cgjwvik817sk2" path="res://Assets/FinalAssets/WindBackground/frame0018.png" id="23_wr3wg"]
+[ext_resource type="Texture2D" uid="uid://bcjiuwhw54mec" path="res://Assets/FinalAssets/WindBackground/frame0019.png" id="24_6xvgv"]
+[ext_resource type="Texture2D" uid="uid://dlgkrl4xscaf7" path="res://Assets/FinalAssets/WindBackground/frame0020.png" id="25_8lpvs"]
+[ext_resource type="Texture2D" uid="uid://dh3q6n06qv0q1" path="res://Assets/FinalAssets/WindBackground/frame0021.png" id="26_x6jpx"]
+[ext_resource type="Texture2D" uid="uid://bl84j8r2mwumt" path="res://Assets/FinalAssets/WindBackground/frame0022.png" id="27_sjh24"]
+[ext_resource type="Texture2D" uid="uid://bdwdc08ff8aek" path="res://Assets/FinalAssets/WindBackground/frame0023.png" id="28_k5jl5"]
+[ext_resource type="Texture2D" uid="uid://c72fsew5kehtn" path="res://Assets/FinalAssets/WindBackground/frame0024.png" id="29_nqk4g"]
+[ext_resource type="Texture2D" uid="uid://3g3p8q0anxqs" path="res://Assets/FinalAssets/WindBackground/frame0025.png" id="30_fh6x0"]
+[ext_resource type="Texture2D" uid="uid://t2mn53kfuyd7" path="res://Assets/FinalAssets/WindBackground/frame0026.png" id="31_j0obb"]
+[ext_resource type="Texture2D" uid="uid://38mmphgdmet2" path="res://Assets/FinalAssets/WindBackground/frame0027.png" id="32_nfavm"]
+[ext_resource type="Texture2D" uid="uid://drrsx6m60nuy5" path="res://Assets/FinalAssets/WindBackground/frame0028.png" id="33_jcn4n"]
+[ext_resource type="Texture2D" uid="uid://r0t01u721psd" path="res://Assets/FinalAssets/WindBackground/frame0029.png" id="34_l4kai"]
+[ext_resource type="Texture2D" uid="uid://b7wb7q8qp5tyn" path="res://Assets/FinalAssets/WindBackground/frame0030.png" id="35_kcoun"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ime0x"]
+size = Vector2(280, 211)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oki1f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_d3cha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i26dy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lmoi6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6uxt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ym3tv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bwj6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_f3c8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_bu0y5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_6a4tp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_631el")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_vs120")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_v2cs8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_32sfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_titue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_tt7mg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_htg8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_jcvim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_fnkle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_wr3wg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_6xvgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_8lpvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_x6jpx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_sjh24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_k5jl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_nqk4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_fh6x0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_j0obb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_nfavm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_jcn4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_l4kai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_kcoun")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 12.0
+}]
 
 [node name="Game" type="Node2D" unique_id=317577036]
+script = ExtResource("1_i26dy")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=517536445]
 
-[node name="Pot" parent="." unique_id=1865387772 instance=ExtResource("2_qxrlw")]
-position = Vector2(469, 247)
+[node name="Background" type="TextureRect" parent="." unique_id=515180659]
+z_index = 1
+offset_left = -320.0
+offset_top = -180.0
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("1_ebmjs")
 
-[node name="Window" parent="." unique_id=654464002 instance=ExtResource("3_wrm1d")]
-position = Vector2(-3, -3)
+[node name="Sky" type="TextureRect" parent="." unique_id=194679411]
+z_index = -1
+offset_left = -320.0
+offset_top = -180.0
+offset_right = -280.0
+offset_bottom = -140.0
+texture = ExtResource("3_lmoi6")
+
+[node name="Window" type="Area2D" parent="." unique_id=723545422]
+position = Vector2(0, -63)
+script = ExtResource("2_qxrlw")
+
+[node name="SeedTimer" type="Timer" parent="Window" unique_id=1126348270]
+wait_time = 0.5
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Window" unique_id=1261866246]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_ime0x")
+
+[node name="PotPlacements" type="Node2D" parent="." unique_id=1282507695]
+
+[node name="Pot" parent="PotPlacements" unique_id=1865387772 instance=ExtResource("3_wrm1d")]
+position = Vector2(-188, -13)
+
+[node name="Pot2" parent="PotPlacements" unique_id=1656480517 instance=ExtResource("3_wrm1d")]
+position = Vector2(186, -13)
+
+[node name="Pot3" parent="PotPlacements" unique_id=148418573 instance=ExtResource("3_wrm1d")]
+position = Vector2(-217, 13)
+
+[node name="Pot4" parent="PotPlacements" unique_id=2058856231 instance=ExtResource("3_wrm1d")]
+position = Vector2(-145, 13)
+
+[node name="Pot5" parent="PotPlacements" unique_id=2009061463 instance=ExtResource("3_wrm1d")]
+position = Vector2(-73, 13)
+
+[node name="Pot6" parent="PotPlacements" unique_id=565331622 instance=ExtResource("3_wrm1d")]
+position = Vector2(-1, 13)
+
+[node name="Pot7" parent="PotPlacements" unique_id=1957403614 instance=ExtResource("3_wrm1d")]
+position = Vector2(71, 13)
+
+[node name="Pot8" parent="PotPlacements" unique_id=601359749 instance=ExtResource("3_wrm1d")]
+position = Vector2(143, 13)
+
+[node name="Pot9" parent="PotPlacements" unique_id=1707527563 instance=ExtResource("3_wrm1d")]
+position = Vector2(215, 13)
+
+[node name="Pot10" parent="PotPlacements" unique_id=1785394172 instance=ExtResource("3_wrm1d")]
+position = Vector2(-188, 42)
+
+[node name="Pot11" parent="PotPlacements" unique_id=349034749 instance=ExtResource("3_wrm1d")]
+position = Vector2(-113, 42)
+
+[node name="Pot12" parent="PotPlacements" unique_id=565425514 instance=ExtResource("3_wrm1d")]
+position = Vector2(-39, 42)
+
+[node name="Pot13" parent="PotPlacements" unique_id=1130926498 instance=ExtResource("3_wrm1d")]
+position = Vector2(35, 41)
+
+[node name="Pot14" parent="PotPlacements" unique_id=966668341 instance=ExtResource("3_wrm1d")]
+position = Vector2(109, 41)
+
+[node name="Pot15" parent="PotPlacements" unique_id=1573650768 instance=ExtResource("3_wrm1d")]
+position = Vector2(186, 42)
+
+[node name="Net" parent="." unique_id=371491515 instance=ExtResource("4_3dryh")]
+z_index = 5
+position = Vector2(224, -90)
+
+[node name="WindyBackground" type="AnimatedSprite2D" parent="." unique_id=1827897407]
+position = Vector2(0, -61)
+sprite_frames = SubResource("SpriteFrames_oki1f")
+frame_progress = 0.4956347

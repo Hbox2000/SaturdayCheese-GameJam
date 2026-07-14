@@ -25,7 +25,6 @@ func _ready() -> void:
 	var plantFolders: Array[String] = _getPlantFolders()
 	
 	for folder in plantFolders:
-		push_warning(folder)
 		_registerPlant(folder)
 
 

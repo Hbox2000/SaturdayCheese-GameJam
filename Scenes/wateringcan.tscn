@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bucpe2f4wfgqp"]
+
+[ext_resource type="PackedScene" uid="uid://dupkpwef6c11r" path="res://Scenes/tool.tscn" id="1_fxu28"]
+[ext_resource type="Texture2D" uid="uid://c0nxc7vgex48q" path="res://Assets/FinalAssets/WateringCan.png" id="2_7aw4m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n4qsc"]
+size = Vector2(69, 60)
+
+[node name="WateringCan" unique_id=321682570 instance=ExtResource("1_fxu28")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0" unique_id=1300051549]
+position = Vector2(-1.5, 5)
+shape = SubResource("RectangleShape2D_n4qsc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1" unique_id=1268478910]
+position = Vector2(-33, -30)
+texture = ExtResource("2_7aw4m")

@@ -2,5 +2,6 @@
 
 [ext_resource type="Script" uid="uid://eivsqikg67cv" path="res://Scripts/tool.gd" id="1_v307u"]
 
-[node name="Tool" type="Node2D" unique_id=371491515]
+[node name="Tool" type="Area2D" unique_id=321682570]
+z_index = 5
 script = ExtResource("1_v307u")
