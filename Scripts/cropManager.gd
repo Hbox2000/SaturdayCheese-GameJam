@@ -22,13 +22,14 @@ class plantTextures:
 
 var registeredPlants: Array[plantTextures]
 
+var currentlyLivingPlants: Array[int]
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var plantFolders: Array[String] = _getPlantFolders()
 	
 	for folder in plantFolders:
 		_registerPlant(folder)
-
 
 func getTexture(index: int, stage: int) -> Resource:
 	return _textureFromIndex(registeredPlants[index], stage)
@@ -76,3 +77,12 @@ func _getPlantFolders() -> Array[String]:
 	
 	dir.list_dir_end()
 	return folders
+
+func addLivingPlant(plantId: int) -> void:
+	currentlyLivingPlants.append(plantId)
+
+func removeLivingPlant(plantId: int) -> void:
+	currentlyLivingPlants.remove_at(currentlyLivingPlants.find(plantId))
+
+func getLivingPlants() -> Array[int]:
+	return currentlyLivingPlants

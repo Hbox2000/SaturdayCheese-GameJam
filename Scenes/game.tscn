@@ -40,6 +40,10 @@
 [ext_resource type="Texture2D" uid="uid://ch3uymdnwg0q8" path="res://Assets/FinalAssets/WindBackground/frame0030.png" id="35_kcoun"]
 [ext_resource type="PackedScene" uid="uid://bucpe2f4wfgqp" path="res://Scenes/wateringcan.tscn" id="38_6uxt2"]
 [ext_resource type="PackedScene" uid="uid://cmnvyeyutth5g" path="res://Scenes/scissors.tscn" id="39_bwj6o"]
+[ext_resource type="AudioStream" uid="uid://bbppbwtki4xmb" path="res://Assets/SFX/scissors.wav" id="41_631el"]
+[ext_resource type="AudioStream" uid="uid://da7cg741gcjmd" path="res://Assets/SFX/seed destroyed.wav" id="42_vs120"]
+[ext_resource type="AudioStream" uid="uid://tk1gummjymua" path="res://Assets/SFX/seed planted.wav" id="43_v2cs8"]
+[ext_resource type="AudioStream" uid="uid://1ek118274hx1" path="res://Assets/SFX/succesful catch.wav" id="44_32sfa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ime0x"]
 size = Vector2(280, 202)
@@ -144,6 +148,17 @@ animations = [{
 "name": &"default",
 "speed": 12.0
 }]
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_ime0x"]
+stream_count = 4
+stream_0/stream = ExtResource("44_32sfa")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("42_vs120")
+stream_1/volume = 0.0
+stream_2/stream = ExtResource("43_v2cs8")
+stream_2/volume = 0.0
+stream_3/stream = ExtResource("41_631el")
+stream_3/volume = 0.0
 
 [node name="Game" type="Node2D" unique_id=317577036]
 script = ExtResource("1_i26dy")
@@ -266,3 +281,7 @@ position = Vector2(186, 42)
 position = Vector2(0, -61)
 sprite_frames = SubResource("SpriteFrames_oki1f")
 frame_progress = 0.4956347
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1793247173]
+stream = SubResource("AudioStreamSynchronized_ime0x")
+autoplay = true
