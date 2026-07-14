@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uya355kj8sm7"
-path="res://.godot/imported/4_chomp.png-e2c7bfbe50da2de63d28b625f1b8383e.ctex"
+uid="uid://bk4tok7a2magl"
+path="res://.godot/imported/4_Chomp.png-463540cf2c38368f2fe14050cf21144f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Plants/7_Chomp/4_chomp.png"
-dest_files=["res://.godot/imported/4_chomp.png-e2c7bfbe50da2de63d28b625f1b8383e.ctex"]
+source_file="res://Assets/Plants/7_Chomp/4_Chomp.png"
+dest_files=["res://.godot/imported/4_Chomp.png-463540cf2c38368f2fe14050cf21144f.ctex"]
 
 [params]
 
