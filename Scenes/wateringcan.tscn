@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dupkpwef6c11r" path="res://Scenes/tool.tscn" id="1_fxu28"]
 [ext_resource type="Texture2D" uid="uid://c0nxc7vgex48q" path="res://Assets/FinalAssets/WateringCan.png" id="2_7aw4m"]
 [ext_resource type="Script" uid="uid://ci4bp6lf2pv1v" path="res://Scripts/wateringCan.gd" id="2_n4qsc"]
+[ext_resource type="AudioStream" uid="uid://cjjx3far4lr7v" path="res://Assets/SFX/wateringCan.wav" id="4_n4qsc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n4qsc"]
 size = Vector2(59, 25)
@@ -58,3 +59,7 @@ one_shot = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PickupHitbox" parent_id_path=PackedInt32Array(459994866) index="0" unique_id=1098760992]
 polygon = PackedVector2Array(32, 84, 32, 24, 8, 1, -13, 23, -48, 22, -33, 83)
+
+[node name="WaterPour" type="AudioStreamPlayer" parent="." index="4" unique_id=1540042215]
+stream = ExtResource("4_n4qsc")
+volume_db = -10.0

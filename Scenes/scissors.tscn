@@ -68,8 +68,8 @@ polygon = PackedVector2Array(-22, -43, 21, -43, 21, 39, -22, 39)
 
 [node name="SeedDestroyed" type="AudioStreamPlayer" parent="." index="3" unique_id=876410569]
 stream = ExtResource("4_3v7gi")
-volume_db = -7.298
+volume_db = -15.0
 
 [node name="Scissors" type="AudioStreamPlayer" parent="." index="4" unique_id=902317032]
 stream = ExtResource("5_kmxyp")
-volume_db = -13.0
+volume_db = -16.0

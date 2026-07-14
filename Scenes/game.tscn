@@ -40,10 +40,11 @@
 [ext_resource type="Texture2D" uid="uid://ch3uymdnwg0q8" path="res://Assets/FinalAssets/WindBackground/frame0030.png" id="35_kcoun"]
 [ext_resource type="PackedScene" uid="uid://bucpe2f4wfgqp" path="res://Scenes/wateringcan.tscn" id="38_6uxt2"]
 [ext_resource type="PackedScene" uid="uid://cmnvyeyutth5g" path="res://Scenes/scissors.tscn" id="39_bwj6o"]
-[ext_resource type="AudioStream" uid="uid://bbppbwtki4xmb" path="res://Assets/SFX/scissors.wav" id="41_631el"]
-[ext_resource type="AudioStream" uid="uid://da7cg741gcjmd" path="res://Assets/SFX/seed destroyed.wav" id="42_vs120"]
-[ext_resource type="AudioStream" uid="uid://tk1gummjymua" path="res://Assets/SFX/seed planted.wav" id="43_v2cs8"]
-[ext_resource type="AudioStream" uid="uid://1ek118274hx1" path="res://Assets/SFX/succesful catch.wav" id="44_32sfa"]
+[ext_resource type="AudioStream" uid="uid://cu17qrisogin8" path="res://Assets/SFX/Music/sat cheese soundtrack - CORE 1.mp3" id="41_vs120"]
+[ext_resource type="AudioStream" uid="uid://btgddxufdj4ly" path="res://Assets/SFX/Music/sat cheese soundtrack - CORE 2.mp3" id="42_v2cs8"]
+[ext_resource type="AudioStream" uid="uid://ghrnv4pedwcu" path="res://Assets/SFX/Music/sat cheese soundtrack - LAYER 1.mp3" id="43_32sfa"]
+[ext_resource type="AudioStream" uid="uid://devowcin278d5" path="res://Assets/SFX/Music/sat cheese soundtrack - LAYER 2.mp3" id="44_titue"]
+[ext_resource type="AudioStream" uid="uid://bonk4bq8exdcb" path="res://Assets/SFX/Music/sat cheese soundtrack - LAYER 3.mp3" id="45_tt7mg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ime0x"]
 size = Vector2(280, 202)
@@ -150,15 +151,17 @@ animations = [{
 }]
 
 [sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_ime0x"]
-stream_count = 4
-stream_0/stream = ExtResource("44_32sfa")
+stream_count = 5
+stream_0/stream = ExtResource("41_vs120")
 stream_0/volume = 0.0
-stream_1/stream = ExtResource("42_vs120")
+stream_1/stream = ExtResource("42_v2cs8")
 stream_1/volume = 0.0
-stream_2/stream = ExtResource("43_v2cs8")
+stream_2/stream = ExtResource("43_32sfa")
 stream_2/volume = 0.0
-stream_3/stream = ExtResource("41_631el")
+stream_3/stream = ExtResource("44_titue")
 stream_3/volume = 0.0
+stream_4/stream = ExtResource("45_tt7mg")
+stream_4/volume = 0.0
 
 [node name="Game" type="Node2D" unique_id=317577036]
 script = ExtResource("1_i26dy")

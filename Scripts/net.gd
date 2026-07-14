@@ -4,27 +4,32 @@ extends "res://Scripts/tool.gd"
 
 @onready var succesful_catch: AudioStreamPlayer = $SuccesfulCatch
 @onready var seed_planted: AudioStreamPlayer = $SeedPlanted
+@onready var net_swish: AudioStreamPlayer = $NetSwish
 
 var overlappedSeed: Node2D = null
 var capturedSeed: Node2D = null
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("left_click"):
-		if overlappedSeed and not capturedSeed and is_following():
-			capturedSeed = overlappedSeed
-			overlappedSeed = null
-			_capture_seed.call_deferred(capturedSeed)
-			return
+		if is_following():
+			net_swish.play()
+			if overlappedSeed and not capturedSeed:
+				capturedSeed = overlappedSeed
+				overlappedSeed = null
+				_capture_seed.call_deferred(capturedSeed)
+				return
 		
 		if capturedSeed:
 			var pot := _find_overlapping_pot()
 			if pot:
 				if not pot.hasPlant:
+					net_swish.stop()
 					pot.addPlant(capturedSeed.seedTextureId, 1)
 					capturedSeed.queue_free()
 					capturedSeed = null
 					seed_planted.play()
 			else:
+				net_swish.stop()
 				capturedSeed.queue_free()
 				capturedSeed = null
 	
