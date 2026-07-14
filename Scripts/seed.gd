@@ -1,6 +1,6 @@
 extends Node2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
-const windSpeed : float = 0.5
+var windSpeed : float
 var numFrames : int = 2
 var mainPos : Vector2 = position
 var windowBounds: RectangleShape2D
@@ -9,14 +9,13 @@ var windActive: bool = true
 
 var seedTextureId : int;
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	mainPos = position
 	sprite_2d.scale = sprite_2d.scale / 6
 	seedTextureId = randi_range(0, cropManager.maxSeedCount() - 1)
-	sprite_2d.texture = getTexture() # this will error until the seed manager is implemented
+	sprite_2d.texture = getTexture()
+	windSpeed = randf_range(0.2, 1)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	numFrames = numFrames + 1
 	

@@ -9,18 +9,24 @@ var overlappedSeed: Node2D = null
 var capturedSeed: Node2D = null
 
 func _process(delta: float) -> void:
-	if overlappedSeed and not capturedSeed and Input.is_action_pressed("left_click") and is_following():
-		capturedSeed = overlappedSeed
-		overlappedSeed = null
-		_capture_seed.call_deferred(capturedSeed)
-	
-	if capturedSeed and Input.is_action_just_pressed("left_click"):
-		var pot := _find_overlapping_pot()
-		if pot and not pot.hasPlant:
-			pot.addPlant(capturedSeed.seedTextureId, 1)
-			capturedSeed.queue_free()
-			capturedSeed = null
-			seed_planted.play()
+	if Input.is_action_just_pressed("left_click"):
+		if overlappedSeed and not capturedSeed and is_following():
+			capturedSeed = overlappedSeed
+			overlappedSeed = null
+			_capture_seed.call_deferred(capturedSeed)
+			return
+		
+		if capturedSeed:
+			var pot := _find_overlapping_pot()
+			if pot:
+				if not pot.hasPlant:
+					pot.addPlant(capturedSeed.seedTextureId, 1)
+					capturedSeed.queue_free()
+					capturedSeed = null
+					seed_planted.play()
+			else:
+				capturedSeed.queue_free()
+				capturedSeed = null
 	
 	super._process(delta)
 
