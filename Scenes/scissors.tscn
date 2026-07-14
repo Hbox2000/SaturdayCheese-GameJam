@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cmnvyeyutth5g"]
+
+[ext_resource type="PackedScene" uid="uid://dupkpwef6c11r" path="res://Scenes/tool.tscn" id="1_hj3hy"]
+[ext_resource type="Texture2D" uid="uid://flgkgmuf472f" path="res://Assets/FinalAssets/Scissors.png" id="2_643n5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qywwh"]
+atlas = ExtResource("2_643n5")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v7gi"]
+atlas = ExtResource("2_643n5")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xwxj8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qywwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v7gi")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ui3f"]
+size = Vector2(38, 50)
+
+[node name="Scissors" unique_id=321682570 instance=ExtResource("1_hj3hy")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0" unique_id=1606681894]
+sprite_frames = SubResource("SpriteFrames_xwxj8")
+frame_progress = 0.6151432
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=22943420]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_2ui3f")
