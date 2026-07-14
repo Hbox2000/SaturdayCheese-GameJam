@@ -32,6 +32,8 @@ func _ready() -> void:
 		_registerPlant(folder)
 
 func getTexture(index: int, stage: int) -> Resource:
+	if index == 10 or index == 11:
+		push_warning("one spawned")
 	return _textureFromIndex(registeredPlants[index], stage)
 
 func maxSeedCount() -> int:
@@ -50,13 +52,20 @@ func _textureFromIndex(textures: plantTextures, index: int) -> Resource:
 
 
 func _registerPlant(path: String) -> void:
-	var plantName: String = path.substr(22)
+	var folderName: String = path.get_file()
+	var underscoreIndex: int = folderName.find("_")
+	var plantIndex: int = int(folderName.substr(0, underscoreIndex))
+	var plantName: String = folderName.substr(underscoreIndex + 1)
+	
 	var textures = plantTextures.new()
 	
 	for i in range(5):
 		textures._inputTexture(load(path.path_join(str(i) + "_" + plantName + ".png")), i)
 	
-	registeredPlants.append(textures)
+	if plantIndex >= registeredPlants.size():
+		registeredPlants.resize(plantIndex + 1)
+	
+	registeredPlants[plantIndex] = textures
 
 func _getPlantFolders() -> Array[String]:
 	var folders: Array[String] = []
